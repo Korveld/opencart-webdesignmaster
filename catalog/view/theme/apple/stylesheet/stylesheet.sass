@@ -1,0 +1,624 @@
+@import "bourbon"
+@import "vars"
+@import "fonts"
+@import "mfp-zoom-in"
+
+body
+  font-size: 16px
+  min-width: 320px
+  position: relative
+  line-height: 1.6
+  overflow-x: hidden
+  font-family: $default-font
+
+.success-add
+  position: fixed
+  top: 20px
+  right: 20px
+  opacity: 0
+  visibility: hidden
+  z-index: 99999
+  transition: all .3s ease
+  &.fade-in
+    opacity: 1
+    visibility: visible
+
+#cart .dropdown-menu
+  display: block
+  right: -9999px
+  opacity: 0
+  visibility: hidden
+  transition: opacity .3s ease
+
+.open > .dropdown-menu
+  right: 0 !important
+  opacity: 1 !important
+  visibility: visible !important
+
+header
+  background-color: #333333
+  padding: 7px 0
+  .dropdown
+    display: inline-block
+    a.dropdown-toggle
+      font-size: 14px
+      color: #999
+      margin: 3px 0 0
+      padding: 5px 0
+      display: block
+      text-decoration: none
+      cursor: pointer
+      transition: all .3s ease
+      &:hover, &:active, &:focus
+        text-decoration: none
+        color: #ffffff
+
+.col-md-3 ul
+  margin: 0
+  padding: 0
+
+.dropdown-menu
+  padding: 0
+  margin-top: 9px
+  border: none
+    radius: 0
+  left: 0
+  > li
+    > a
+      padding: 5px 20px
+      transition: all .3s ease
+      &:focus, &:hover
+        background-color: $accent2
+        color: #ffffff
+
+.header-phone
+  display: inline-block
+  color: #ffffff
+  float: right
+  font-size: 18px
+  padding: 4px 0 4px 10px
+  border-left: 1px solid #444444
+
+.logo
+  margin-top: 4px
+
+.form-control
+  &:focus
+    box-shadow: none
+
+#search
+  width: 100%
+  .form-control
+    padding: 5px 16px
+    height: 35px
+    border: none
+      radius: 0
+    background-color: #444444
+    font:
+      style: italic
+      size: 13px
+    color: #fff
+    transition: all .3s ease
+    box-shadow: transparent 0 0 0 1px inset
+    &:focus, &:hover
+      background-color: #555555
+      box-shadow: #777 0 0 0 1px inset
+
+  .input-group-btn
+    position: absolute
+    right: 26px
+    .btn
+      padding: 9px 10px
+      border: none
+        radius: 0
+      background-color: transparent
+      color: #999999
+      font-size: 13px
+
+.navbar-collapse
+  overflow-y: unset
+
+.top-menu
+  border-bottom: 1px solid #ededed
+  margin-bottom: 40px
+  a
+    color: #333333
+  .navbar
+    margin-bottom: 0
+    font-size: 14px
+    &-nav
+      > li
+        > a
+          padding-top: 12px
+          padding-bottom: 12px
+          transition: all .3s ease
+          &:hover, &:focus
+            text-decoration: underline
+            background: none
+  .cart-wrapper
+    .dropdown-menu
+      padding: 15px
+      width: 460px
+      .table-striped
+        img
+          width: 47px
+          height: 47px
+          min-width: 47px
+      p.text-right
+        padding: 0 10px
+
+
+a
+  outline: 0 !important
+
+#cart
+  button
+    background-color: $accent3
+    color: #ffffff
+    border-radius: 0
+    padding-top: 14px
+    padding-bottom: 15px
+    border: none
+    font-family: $thin-font
+    font-size: 16px
+    text-align: left
+  .dropdown-menu
+    margin-top: 10px
+  .btn-danger
+    border-radius: 10px
+    padding: 0
+    background-color: transparent
+    border: none
+    i
+      color: #000000
+
+.cart-wrapper
+  padding-left: 0
+
+.navbar-header
+  position: relative
+
+.navbar-toggle
+  padding: 10px
+  margin-top: 0
+  margin-right: 0
+  margin-bottom: 0
+  position: absolute
+  top: 6px
+  right: 0
+
+.toggle-top-text
+  text-transform: uppercase
+  display: inline-block
+  color: $accent
+  font-family: $semibold-font
+  padding: 15px 0
+
+.swiper-viewport
+  border: none
+  box-shadow: none
+  border-radius: 0
+
+.home-slider.swiper-viewport
+  .swiper-button-prev,
+  .swiper-button-next
+    &:before
+      font-size: 35px
+      opacity: .4
+      transition: all .3s ease
+    &:hover
+      &:before
+        opacity: 1
+  .swiper-button-prev
+    &:before
+      content: "\f104"
+  .swiper-button-next
+    &:before
+      content: "\f105"
+
+a.list-group-item
+  padding: 12px 15px
+  border-top: 0 none
+  border-color: #ededed
+  transition: all .3s ease
+  &:first-child,
+  &:last-child
+    border-radius: 0
+  &:first-child
+    border-top: 1px solid #ededed
+  &:hover,
+  &:focus,
+  &:active
+    background-color: $accent2
+    border-color: $accent2
+    color: #ffffff
+    text-indent: 10px
+  &.active,
+  &.active:hover,
+  &.active:focus
+    background-color: darken($accent2, 5%)
+    border-color: darken($accent2, 5%)
+    text-indent: 10px
+
+.featured-products
+  h3
+    text-align: center
+    font-size: 28px
+    margin-bottom: 55px
+    margin-top: 80px
+    color: #333333
+    font-family: $thin-font
+
+.product-layout
+  margin-bottom: 40px
+  .product-thumb
+    box-shadow: 0 0 0 1px transparent inset
+    transition: all .3s ease
+    &:hover
+      box-shadow: 0 0 0 1px #ededed inset
+    .image
+      padding: 35px 20px 35px 20px
+  .price
+    font-size: 18px
+    color: #333333
+    font-family: $thin-font
+    margin: 0
+    .price-old
+      font-size: 15px
+      text-decoration: line-through
+  .price-tax
+    display: none
+  .caption
+    padding: 0 20px 25px 20px
+    text-align: center
+    h4
+      margin: 0 0 20px 0
+      a
+        font-size: 22px
+        color: #333333
+        font-family: $thin-font
+        &:hover, &:focus
+          text-decoration: none
+          border-bottom: 1px solid #333
+    p
+      display: none
+      &.price
+        display: block
+    .rating
+      display: none
+  .button-group
+    button
+      display: none
+      border: none
+      background-color: $accent2
+      width: 100%
+      color: #ffffff
+      padding: 10px 0
+      font-size: 14px
+      text-align: center
+      transition: all .3s ease
+      &:hover, &:active
+        background-color: darken($accent2, 5%)
+        text-decoration: none
+      &:focus
+        text-decoration: none
+      &:nth-of-type(1)
+        display: block
+      i
+        display: none
+      span.hidden-xs.hidden-sm.hidden-md
+        display: initial !important
+    a.toclick
+      border: none
+      background-color: #f5f1f3
+      width: 100%
+      color: #777
+      padding: 10px 0
+      font-size: 14px
+      display: block
+      text-align: center
+      transition: all .3s ease
+      &:hover, &:active
+        background-color: darken(#f5f1f3, 5%)
+        text-decoration: none
+      &:focus
+        text-decoration: none
+
+.alert
+  border-radius: 0
+
+.vantage-module
+  blockquote
+    border: none
+    padding: 0
+    margin-top: 45px
+    color: #777777
+    line-height: 1.3
+    ul
+      padding: 0
+      margin: 0
+      list-style-type: none
+      li
+        border: 5px solid #f7f7f7
+        margin-bottom: 20px
+        padding: 15px 20px 15px 45px
+        background-color: transparent
+        transition: border-color .2s ease, background-color .4s ease, color .25s ease, transform .5s ease
+        font-size: 14px
+        position: relative
+
+        &:nth-child(1)
+          > span
+            color: #921ad3
+          &:hover
+            border-color: #921ad3
+            background-color: #921ad3
+
+        &:nth-child(2)
+          > span
+            color: #f53737
+          &:hover
+            border-color: #f53737
+            background-color: #f53737
+
+        &:nth-child(3)
+          > span
+            color: #ff9320
+          &:hover
+            border-color: #ff9320
+            background-color: #ff9320
+
+        &:nth-child(4)
+          > span
+            color: #0079ff
+          &:hover
+            border-color: #0079ff
+            background-color: #0079ff
+
+        &:hover
+          border-color: #666666
+          background-color: #666666
+          color: #ffffff
+          transform: translateY(-5px)
+          > span
+            color: #ffffff
+        > span
+          display: block
+          font-size: 18px
+          margin-bottom: 6px
+          font-family: $semibold-font
+          > span
+            position: absolute
+            left: 15px
+            font-size: 18px
+
+.mfp-content
+  .product-popup
+    display: block
+
+.product-popup
+  background-color: #ffffff
+  max-width: 320px
+  position: relative
+  margin: auto
+  padding: 15px
+  display: none
+  h2
+    margin: 15px 0 10px
+    font-size: 28px
+    text-align: center
+    font-family: $thin-font
+  p
+    text-align: center
+  .ajax-form
+    position: relative
+    margin-top: 15px
+  .btn.btn-primary
+    position: absolute
+    right: 0
+    top: 0
+  .success
+    position: absolute
+    z-index: 1
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-color: #fff
+    text-align: center
+    text-transform: uppercase
+    padding: 28% 10% 10%
+    display: none
+  .price-tax
+    display: none
+  .price-old
+    text-decoration: line-through
+    font-size: 14px
+  .pp-img-wrap
+    text-align: center
+    img
+      max-width: 100%
+      width: 90%
+      margin-top: 20px
+  .pp-content
+    h3
+      text-align: center
+      font-family: $thin-font
+      margin: 30px 0 15px
+    p
+      text-align: center
+
+.form-control
+  border-radius: 0
+.btn
+  border-radius: 0
+  transition: all .3s ease
+.btn-primary
+  background-color: $accent2
+  border-color: $accent2
+.mfp-close
+  transition: all .3s ease
+
+.main-footer
+  margin-top: 60px
+  .footer-cnt
+    background-color: #333333
+    padding: 7px 0
+    > .container
+      > .row
+        > div:last-child
+          border-left: 1px solid #444444
+  .footer-mnu
+    text-align: center
+    ul
+      margin: 0
+      padding: 0
+      display: inline-block
+      float: none
+      li
+        display: inline-block
+        font-size: 14px
+        a
+          color: #999999
+          display: block
+          padding: 10px 14px
+          transition: all .3s ease
+          &:hover, &:focus, &:active
+            color: #b6b6b6
+            background-color: transparent
+            text-decoration: underline
+  .nav-social
+    padding: 6px 0
+    text-align: right
+    ul, li
+      padding: 0
+      margin: 0
+      list-style-type: none
+    li
+      display: inline-block
+      a
+        color: #8f8f8f
+        font-size: 20px
+        padding: 0 5px
+        transition: all .3s ease
+        &:hover, &:focus, &:active
+          color: lighten(#8f8f8f, 10%)
+  .footer-phone
+    background-color: #262626
+    color: #8c8c8c
+    padding: 15px 0 35px
+    .site-phone_wrap
+      text-align: center
+      font-family: $thin-font
+      .site-phone
+        font-size: 22px
+        color: #c8c8c8
+        margin-top: 8px
+        line-height: 1.3
+      .callback
+        font-size: 14px
+        color: #777
+        border-bottom: 1px dashed #777
+        transition: all .3s ease
+        &:hover, &:focus, &:active
+          text-decoration: none
+          color: lighten(#999999, 10%)
+          border-color: lighten(#999999, 10%)
+
+#content
+  h1
+    margin-top: 0
+    margin-bottom: 20px
+    font-family: $thin-font
+  p
+    img
+      max-width: 100% !important
+      width: 100% !important
+
+.input-group-sm > .form-control,
+.input-group-sm > .input-group-addon,
+.input-group-sm > .input-group-btn > .btn
+  border-radius: 0
+
+.sub-cats
+  margin-bottom: 15px
+  margin-top: 10px
+  font-size: 14px
+  .sub-name
+    font-family: $semibold-font
+    display: inline-block
+  a
+    font-family: $thin-font
+    color: #333333
+    text-decoration: underline
+    padding: 0 2px
+    &:hover
+      text-decoration: none
+
+.cat-head
+  border-bottom: #eaeaea 1px solid
+  margin-bottom: 30px
+
+.pagination > li:first-child > a,
+.pagination > li:first-child > span
+  border-radius: 0
+
+.pagination > li > a,
+.pagination > li > span
+  transition: all .3s ease
+
+.pagination > li > a:focus,
+.pagination > li > a:hover,
+.pagination > li > span:focus,
+.pagination > li > span:hover
+  background-color: $accent2
+  border-color: $accent2
+  color: #ffffff
+
+.price-wrap
+  margin-top: 40px
+  .def-price
+    font-size: 35px
+    font-family: $thin-font
+
+#product
+  margin-top: 40px
+  button
+    background-color: $accent3
+    border-color: $accent3
+  .control-label
+    margin-bottom: 0
+    font-size: 14px
+    color: #333333
+    font-weight: 400
+  .product-count
+    position: relative
+    top: -13px
+
+.fa-stack-2x
+  font-size: 1.5em
+
+#tab-description
+  padding: 30px 0
+
+.nav-tabs > li > a
+  border-radius: 0
+  transition: all .3s ease
+
+.product-page-image
+  list-style-type: none
+  padding: 0
+  margin: 0
+  text-align: center
+  .thumbnail
+    border: none
+
+.image-additional
+  display: inline-block
+
+.panel,
+.panel-heading,
+.panel-group .panel
+  border-radius: 0
+
+@import "media"

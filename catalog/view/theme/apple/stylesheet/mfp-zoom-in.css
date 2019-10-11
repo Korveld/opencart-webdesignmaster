@@ -1,0 +1,54 @@
+/*
+====== Zoom effect ======
+*/
+.mfp-zoom-in {
+	/* start state */
+	/* animate in */
+	/* animate out */
+}
+.mfp-zoom-in .product-popup {
+	opacity: 0;
+	transition: all 0.2s ease-in-out;
+	transform: scale(0.8);
+}
+.mfp-zoom-in.mfp-bg {
+	opacity: 0;
+	transition: all 0.3s ease-out;
+}
+.mfp-zoom-in.mfp-ready .product-popup {
+	opacity: 1;
+	transform: scale(1);
+}
+.mfp-zoom-in.mfp-ready.mfp-bg {
+	opacity: 0.8;
+}
+.mfp-zoom-in.mfp-removing .product-popup {
+	transform: scale(1.2);
+	opacity: 0;
+}
+.mfp-zoom-in.mfp-removing.mfp-bg {
+	opacity: 0;
+}
+
+.mfp-with-zoom .mfp-container,
+.mfp-with-zoom.mfp-bg {
+	opacity: 0;
+	-webkit-backface-visibility: hidden;
+	/* ideally, transition speed should match zoom duration */
+	-webkit-transition: all 0.3s ease-out; 
+	-moz-transition: all 0.3s ease-out; 
+	-o-transition: all 0.3s ease-out; 
+	transition: all 0.3s ease-out;
+}
+
+.mfp-with-zoom.mfp-ready .mfp-container {
+	opacity: 1;
+}
+.mfp-with-zoom.mfp-ready.mfp-bg {
+	opacity: 0.8;
+}
+
+.mfp-with-zoom.mfp-removing .mfp-container, 
+.mfp-with-zoom.mfp-removing.mfp-bg {
+	opacity: 0;
+}

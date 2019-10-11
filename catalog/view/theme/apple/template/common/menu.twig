@@ -1,0 +1,17 @@
+<nav id="menu" class="navbar">
+  <div class="navbar-header">
+    <span class="toggle-top-text visible-xs visible-xs hidden-sm hidden-md">{{ text_information }}</span>
+    <button type="button" class="btn btn-navbar navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"><i class="fa fa-bars"></i></button>
+  </div>
+  <div class="collapse navbar-collapse navbar-ex1-collapse">
+    {% if informations %}
+    <ul class="nav navbar-nav">
+      {% for information in informations %}
+        <li><a href="{{ information.href }}">{{ information.title }}</a></li>
+      {% endfor %}
+      <li><a href="/skidki">Скидки</a></li>
+      <li><a href="{{ contact }}">{{ menu_contact }}</a></li>
+    </ul>
+    {% endif %}
+  </div>
+</nav>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<modification>
+	<code>modificationname</code>
+	<name>Modification Name</name>
+	<version>1.0</version>
+	<author></author>
+	<link></link>
+	<file path="catalog/controller/common/file.twig">
+		<operation>
+			<search><![CDATA[
+				
+			]]></search>
+			<add position="replace|before|after"><![CDATA[
+
+			]]></add>
+		</operation>
+	</file>  
+</modification>
